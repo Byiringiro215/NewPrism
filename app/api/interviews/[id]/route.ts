@@ -139,9 +139,14 @@ export async function PUT(
     }
     
     // Get user type\
-    const { data: userDataI'll create a script to set up all the necessary database tables for the Prism platform based on the schema provided in the documentation.
+    const { data: userData, error: userDataError } = await supabase
+    .from("users")
+    .select("user_type")
+    .eq("id", user.id)
+    .single()
+  
 
-```js type="nodejs" project="Prism Database Setup" file="setup-database.js"
+
 import { createClient } from '@supabase/supabase-js';
 
 // Initialize Supabase client

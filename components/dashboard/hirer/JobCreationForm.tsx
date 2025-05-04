@@ -15,7 +15,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Switch } from "@/components/ui/switch";
 import { useToast } from "@/components/ui/use-toast";
 import { Steps } from "@/components/ui/steps";
-
+import { Badge } from "@/components/ui/badge";
 const jobFormSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   department: z.string().min(1, "Please select a department"),
@@ -455,3 +455,4 @@ export default function JobCreationForm() {
       </div>
     </form>
   );
+}
