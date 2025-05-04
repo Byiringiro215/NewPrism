@@ -35,10 +35,8 @@ export default function ResetPasswordPage() {
       setError("Passwords do not match.")
       return
     }
-    \
-    if (password.length &lt;
-    8
-    )
+    
+    if (password.length <8)
     setError("Password must be at least 8 characters long.")
     return
 
